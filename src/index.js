@@ -31,7 +31,7 @@ app.use("/avatar", express.static("./src/db/avatar"));
 app.post("/login", login);
 app.post("/register", register);
 app.post("/verify-account", verifyKey, verifyAccount);
-app.get("/", getUsers);
+app.get("/", (req, res) => res.send("Home Page Route"));
 app.patch("/forgot-password", forgotPassword);
 app.patch("/set-password", verifyNewPwdKey, setPassword);
 app.patch("/new-password/:uuid", updateUserPassword);
