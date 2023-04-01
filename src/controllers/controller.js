@@ -21,6 +21,8 @@ import {
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
+const baseUrl = "https://chat-gpt-interface-omega.vercel.app";
+
 const login = async (req, res) => {
   const { error } = loginSchema.validate(req.body);
   if (error) {
@@ -74,7 +76,7 @@ const register = async (req, res) => {
   await user.save();
   await secureKey.save();
 
-  const templateUrl = `http://localhost:3000/verify-account?key=${randomBytes}&email=${user.email}`;
+  const templateUrl = `${baseUrl}/verify-account?key=${randomBytes}&email=${user.email}`;
 
   mailTransport().sendMail({
     from: "mail@mail.com",
@@ -189,7 +191,7 @@ const forgotPassword = async (req, res) => {
       token: randomBytes,
     });
     await setPwdToken.save();
-    const templateUrl = `http://localhost:3000/set-password?token=${randomBytes}&uuid=${user.uuid}`;
+    const templateUrl = `${baseUrl}/set-password?token=${randomBytes}&uuid=${user.uuid}`;
 
     mailTransport().sendMail({
       from: "mail@mail.com",
@@ -224,13 +226,11 @@ const setPassword = async (req, res) => {
     );
     await PwdTokenModel.findOneAndDelete({ owner: req.user.email });
 
-    const templateUrl = "http://localhost:3000/";
-
     mailTransport().sendMail({
       from: "mail@mail.com",
       to: req.user.email,
       subject: "Chat AI: contraseña reestablecida!",
-      html: newPwdSuccessTemplate(templateUrl, req.user.username),
+      html: newPwdSuccessTemplate(baseUrl, req.user.username),
     });
     res.status(201).json({
       msg: "Contraseña creada con éxito",
@@ -256,7 +256,7 @@ const deleteUser = async (req, res) => {
 const setAvatar = async (req, res) => {
   const { uuid } = req.params;
   const extension = req.file.originalname.split(".").pop();
-  const path = `http://localhost:8000/avatar/${uuid}.${extension}`;
+  const path = `https://chat-gpt-api-xoio.onrender.com/avatar/${uuid}.${extension}`;
   const updated = await UserModel.updateOne(
     { uuid },
     { $set: { avatar: path } }
