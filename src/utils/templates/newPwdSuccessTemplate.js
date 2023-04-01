@@ -108,7 +108,7 @@ export const newPwdSuccessTemplate = (url, username) => {
     <table border="0" cellpadding="15" cellspacing="0" class="image_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
     <tr>
     <td class="pad">
-    <div align="center" class="alignment" style="line-height:10px"><img src="images/LOGO_2.png" style="display: block; height: auto; border: 0; width: 70px; max-width: 100%;" width="70"/></div>
+    <div align="center" class="alignment" style="line-height:10px"><img src="https://chat-gpt-api-xoio.onrender.com/avatar/logo.png" style="display: block; height: auto; border: 0; width: 70px; max-width: 100%;" width="70"/></div>
     </td>
     </tr>
     </table>
