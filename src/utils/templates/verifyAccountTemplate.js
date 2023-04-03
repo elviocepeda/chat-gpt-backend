@@ -116,7 +116,7 @@ export const verifyAccountTemplate = (url, username) => {
     <tr>
     <td class="pad">
     <div style="color:#000000;font-size:20px;font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif;font-weight:400;line-height:120%;text-align:center;direction:ltr;letter-spacing:0px;mso-line-height-alt:24px;">
-    <p style="margin: 0;">¡Click para validar tu cuenta!</p>
+    <p style="margin: 0;">¡Tu cuenta ha sido creada con éxito, ya puedes iniciar sesión!</p>
     </div>
     </td>
     </tr>
@@ -124,7 +124,7 @@ export const verifyAccountTemplate = (url, username) => {
     <table border="0" cellpadding="10" cellspacing="0" class="button_block block-4" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
     <tr>
     <td class="pad">
-    <div align="center" class="alignment"><!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href=${url} style="height:50px;width:157px;v-text-anchor:middle;" arcsize="8%" stroke="false" fillcolor="#145661"><w:anchorlock/><v:textbox inset="0px,0px,0px,0px"><center style="color:#ffffff; font-family:Arial, sans-serif; font-size:20px"><![endif]--><a href=${url} style="text-decoration:none;display:inline-block;color:#ffffff;background-color:#145661;border-radius:4px;width:auto;border-top:0px solid transparent;font-weight:400;border-right:0px solid transparent;border-bottom:0px solid transparent;border-left:0px solid transparent;padding-top:5px;padding-bottom:5px;font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size:20px;text-align:center;mso-border-alt:none;word-break:keep-all;" target="_blank"><span style="padding-left:20px;padding-right:20px;font-size:20px;display:inline-block;letter-spacing:normal;"><span dir="ltr" style="word-break: break-word; line-height: 40px;">Validar</span></span></a><!--[if mso]></center></v:textbox></v:roundrect><![endif]--></div>
+    <div align="center" class="alignment"><!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href=${url} style="height:50px;width:157px;v-text-anchor:middle;" arcsize="8%" stroke="false" fillcolor="#145661"><w:anchorlock/><v:textbox inset="0px,0px,0px,0px"><center style="color:#ffffff; font-family:Arial, sans-serif; font-size:20px"><![endif]--><a href=${url} style="text-decoration:none;display:inline-block;color:#ffffff;background-color:#145661;border-radius:4px;width:auto;border-top:0px solid transparent;font-weight:400;border-right:0px solid transparent;border-bottom:0px solid transparent;border-left:0px solid transparent;padding-top:5px;padding-bottom:5px;font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size:20px;text-align:center;mso-border-alt:none;word-break:keep-all;" target="_blank"><span style="padding-left:20px;padding-right:20px;font-size:20px;display:inline-block;letter-spacing:normal;"><span dir="ltr" style="word-break: break-word; line-height: 40px;">Iniciar sesión</span></span></a><!--[if mso]></center></v:textbox></v:roundrect><![endif]--></div>
     </td>
     </tr>
     </table>
