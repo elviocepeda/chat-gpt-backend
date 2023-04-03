@@ -76,17 +76,18 @@ const register = async (req, res) => {
   await user.save();
   await secureKey.save();
 
-  const templateUrl = `${baseUrl}/verify-account?key=${randomBytes}&email=${user.email}`;
+  // ACCOUNT VERIFICATION TEMPORARY DISABLED
+  //const templateUrl = `${baseUrl}/verify-account?key=${randomBytes}&email=${user.email}`;
 
   mailTransport().sendMail({
-    from: "mail@mail.com",
+    from: "cepedaelvio@gmail.com",
     to: user.email,
     subject: "Chat AI: validar cuenta.",
-    html: verifyAccountTemplate(templateUrl, user.username),
+    html: verifyAccountTemplate(baseUrl, user.username),
   });
 
   res.status(201).json({
-    msg: "¡Enviamos un link a tu email para verificar tu cuenta!",
+    msg: "¡Cuenta creada con éxito, ya podes iniciar sesión!",
     error: false,
   });
 };
@@ -194,7 +195,7 @@ const forgotPassword = async (req, res) => {
     const templateUrl = `${baseUrl}/set-password?token=${randomBytes}&uuid=${user.uuid}`;
 
     mailTransport().sendMail({
-      from: "mail@mail.com",
+      from: "cepedaelvio@gmail.com",
       to: user.email,
       subject: "Chat AI: reestablecer contraseña.",
       html: forgotPasswordTemplate(templateUrl, user.username),
@@ -227,7 +228,7 @@ const setPassword = async (req, res) => {
     await PwdTokenModel.findOneAndDelete({ owner: req.user.email });
 
     mailTransport().sendMail({
-      from: "mail@mail.com",
+      from: "cepedaelvio@gmail.com",
       to: req.user.email,
       subject: "Chat AI: contraseña reestablecida!",
       html: newPwdSuccessTemplate(baseUrl, req.user.username),
