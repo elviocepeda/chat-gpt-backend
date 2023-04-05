@@ -111,9 +111,7 @@ Install <a href="https://nodejs.org/"><strong>Node.js »</strong></a>
 
 ### Installation
 
-Assuming you’ve already installed Node.js,
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+Assuming you’ve already installed Node.js:
 
 1. Clone the repo
    ```sh
